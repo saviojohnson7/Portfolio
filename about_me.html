@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  
+      
+            <div class="container">
+                <nav>
+                    <img src="images/savio_logo.png" alt="" class="logo">
+                    <ul>
+                        <li><a href="main.html">Home</a></li>
+                        <li><a href="ibm.html">Certificate</a></li>
+                        <li><a href="about_me.html">About</a></li>
+                        <li><a href="work.html">Projects</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    
+
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="images/about_us.jpeg" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aut velit ipsam numquam hic neque dignissimos animi, sequi corrupti quae, consequatur inventore optio impedit dolorum ea corporis suscipit necessitatibus et deserunt saepe ullam reprehenderit commodi iure! Quaerat, odio repellendus recusandae molestias incidunt voluptate dignissimos, error consectetur tempora, cum optio libero minima!</p>
+
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('languages')">Languages</p>
+                        <p class="tab-links" onclick="opentab('projects')">Projects</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="languages">
+                        <ul>
+                            <li><span>Python</span></li>
+                            <li><span>Django</span></li>
+                            <li><span>MySQL</span></li>
+                            <li><span>HTML</span></li>
+                            <li><span>CSS</span></li>
+                            <li><span>JavaScript</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="projects">
+                        <ul>
+                            <li><span>Hangman</span></li>
+                            <li><span>Student dababase maangement system</span></li>
+                            <li><span>Portfolio</span></li>
+                            <li><span>ATM Software system</span></li>
+                            <li><span>Daily Income-Expense system</span></li>
+                            <li><span>Ecommerce</span></li>
+                        </ul>
+                    </div>
+
+                    <div class="tab-contents" id="education">
+                        <ul>
+                            <li><span>B.E. Computer Engineeering</span></li>
+                            <li><span>HSC from St.Mary's Junior College</span></li>
+                            <li><span>SSC from St.Mary's High School</span></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        var tablinks = document.getElementsByClassName('tab-links');
+        var tabcontents = document.getElementsByClassName('tab-contents');
+
+        function opentab(tabname){
+            for(tablink of tablinks){
+                tablink.classList.remove("active-link")
+            }
+
+            for(tabcontent of tabcontents){
+                tabcontent.classList.remove('active-tab')
+            }
+            //  to hide the content when clicked on languages, projects and educaton
+
+            event.currentTarget.classList.add("active-link")
+            // for getting a red underline on languages, projects and educaton after clicking on it
+
+            document.getElementById(tabname).classList.add("active-tab")
+            // when we click on education, it will send the education as a argument to the tabname i.e(function opentab(tabname)) and it will search by document.getElementBy Id by education
+
+            // this code is for display the content of languages when clicked. same for education and projects
+        }
+
+
+
+        function allt(){
+            window.alert("Form is successfully submitted")
+        }
+
+        function elec(){
+            document.getElementById("one").style.background="red"
+        }
+
+        function mouse(){
+            document.getElementById("one").style.backgroundColor="pink"
+        }
+        function lea(){
+            document.getElementById("one").style.backgroundColor="yellow"
+        }
+
+        function sav(){
+            document.getElementById("tet").style.background="blue"
+        }
+        function clk(){
+            document.getElementById("tet1").style.background="green"
+        }
+        function clk1(){
+            document.getElementById("tet2").style.background="purple"
+        }
+        function sav1(){
+            document.getElementById("tet").style.background="white"
+        }
+        function savi(){
+            document.getElementById("tet1").style.background="white"
+        }
+        function savio(){
+            document.getElementById("tet2").style.background="white"
+        }
+       
+
+    </script>
+
+    <footer class="copyright">
+        <p>©️ Made by Savio Johnson </p>
+    </footer>
+        
+</body>
+</html>
